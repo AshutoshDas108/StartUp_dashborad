@@ -13,7 +13,8 @@ elif option == 'Startup':
     st.sidebar.selectbox('Select Startup', df['Startup Name'].unique().tolist())
     st.title('Startup Analysis')
 else:
-    st.sidebar.selectbox('Select Investor', ['P', 'Q', 'R'])
+    df['Investors Name'] = df['Investors Name'].fillna('Undisclosed')
+    st.sidebar.selectbox('Select Investor', df['Investors Name'].unique().tolist())
     st.title('Investor Analysis')
 
 
