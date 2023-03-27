@@ -9,7 +9,6 @@ option = st.sidebar.selectbox('Select One', ['Overall Analysis', 'Startup', 'Inv
 
 if option == 'Overall Analysis':
     st.title('Overall Analysis')
-    # adding startup names
 elif option == 'Startup':
     st.sidebar.selectbox('Select Startup', df['Startup Name'].unique().tolist())
     st.title('Startup Analysis')
